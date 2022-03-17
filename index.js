@@ -1,3 +1,6 @@
+//TODO: Add Notes to JavaScript file to explain what is occurring
+
+
 const button = document.querySelector( 'button' );
 const buttonText = document.querySelector( '.button__text' )
 const buttonIcon = document.querySelector( '.button__icon' )
@@ -36,6 +39,6 @@ setTimeout(() => {
   
   button.style.backgroundColor = '#27272B'
   button.style.color = '#F8F8F8'
-  button.style.boxShadow = '0 1rem 2.5rem -1rem rgba(0, 0, 0.25)'
+  button.style.boxShadow = '0 1rem 2.5rem -1rem rgba(0, 0, 0, 0.25)'
   
 }, 5 * 1000)
