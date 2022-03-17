@@ -54,7 +54,7 @@ button[disabled] {
     cursor: not-allowed;
 }
 
-button .material-icon-round {
+button .material-icons-round {
     margin-right: 1rem;
     font-size: 2rem;
     line-height: 1.5;
@@ -77,9 +77,13 @@ button .material-icon-round {
         opacity: 0;
         transform: translate(-12px,100%)
     }
+    48% {
+        opacity: 0;
+        transform: translate(-100px,100%)
+    }
     50% {
         opacity: 1;
-        transform: translate(-100%,100%)
+        transform: translate(-360px,-160px)
     }
     51% {
         opacity: 1;
