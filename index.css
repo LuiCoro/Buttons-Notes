@@ -1,8 +1,34 @@
 /*TODO: Add in Notes that explains what is happening in css & explain the Properties*/
 
+/* CSS * Selector
+
+* ->
+    -Selects all the elements, can also select all elements inside another element
+
+::after (:after) ->
+    - Creates a pseudo-element that is the last child of the selected element.
+    - CSS3 introduced the ::after notation to distinguish pseudo-classes from pseudo-elements
+
+::before (:before) ->
+    - Creates a pseudo-element that is the first child of the selected element.
+
+ */
 *,
 *::after,
 *::before {
+
+    /* CSS Padding & Margin Property
+
+    Padding ->
+        - Sets the padding for all four sides of a element to x pixels
+        - The space between the content and the border of the element
+        - Creates extra space within an element
+
+    Margin ->
+        - Sets the margins for an element to x pixels
+        - Creates extra space around an element
+
+    */
     padding: 0;
     margin: 0
 }
@@ -14,21 +40,155 @@ html {
 }
 
 html, body {
+
+    /* CSS Height Property
+
+    Height ->
+        - Sets the height of the element
+        - Does not include padding, borders, or margins!
+        - Is set to a numeric value (;ile pixels, (r)em, percentages, etc.) then if the
+        content does not fit within the specified height, it will overflow. Overflow is
+        handled by "overflow" property
+
+    */
     height: 100%;
 }
 
 .container {
+
+    /* CSS vh Units & Background-Color Property
+
+    vh (Viewport Height) ->
+        - This unit is based on the height of the Viewport. A value of 1vh = 1%
+        of the viewport height
+
+        Example:
+
+            div {
+            height: 50vh;
+            }
+
+        - The "div" will fill 50% of the viewport's height. So if the browser window
+        is 900 pixels high, the "height" of the "div" will be 450 pixels.
+
+    background-color ->
+        - Sets the background color of an element
+
+    */
     height: 100vh;
     background-color: #FAD161;
 
+    /* CSS Display, Align-Items , & Justify-Content Properties
+
+    display ->
+        -  Sets whether an element is treated as a block or inline element and the
+        layout used for its children, such as "flow layout", "grid" or "flex"
+
+    display: flex ->
+        - The element behaves like a block element and lays out its content according
+        to the flexbox model
+
+    align-items ->
+        -  sets the align-self value on all direct children as a group. In Flexbox, it
+        controls the alignment of items on the Cross Axis . In Grid Layout, it controls
+        the alignment of items on the Block Axis within their grid area
+
+    align-items : center ->
+        - The flex items' margin boxes are centered within the line on the cross-axis. If the
+        cross-size of an item is larger than the flex container, it will overflow equally in both directions
+
+    justify-content ->
+        - Defines how the browser distributes space between and around contents items along the main-axis of
+        a flex container, and the inline axis of a grid container.
+
+    justify-content: center ->
+    The items are packed flush to each other toward teh center of the alignment container along the main axis
+
+     */
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 button {
+
+    /* CSS position Property
+
+    position ->
+        - Sets how an element is positioned in a document. The top,right,bottom, and left properties determine
+        the final location of positioned elements
+
+    position: relative ->
+        - The element is positioned according the normal flow of the document, and then offset relative to itself
+        based on the values of top,right,bottom, and left. The offset does not affect the position of any other
+        elements; thus, the space given for the element in the page layout is the same as if positions were static
+
+    */
     position: relative;
 
+    /* CSS Width, Border, Border-Radius Property
+
+    padding ->
+        - See Line #22
+
+    height ->
+        - See Line #46
+
+
+    width ->
+        - Sets the width of an element, the width of an element does not include padding, border or margins!
+        NOTE:
+            - The min-width % and max-width properties override the width property
+
+        Some Width Values:
+        auto -> Default value. The browser calculates the width
+        length -> Defines the width in px,cm,etc.
+        percentage(%) -> Defines the width in percent of the containing block
+        initial -> Sets this property to its default value
+        inherit -> Inherits this property from its parent
+
+    border ->
+        Shorthand For Properties:
+            - border-width
+            - border-color ( If the border-color is omitted, the color applied will be the color of the text )
+            - border-style
+            - etc.
+
+        Some Border Values:
+            Default Value -> Medium ,None ,Color
+            Inherited -> No
+            Animations -> yes, but gotta check if the property even allows it
+
+    border-radius ->
+        - Defines the radius of the element's corners
+        - Can have from 1 - 4 values.
+
+        Some Value Guidelines:
+            Four Values ->
+                border-radius : 15px 50px 30px 5px;
+
+                ( First Value( 15px ) applies to the top-left corner, Second Value( 50px ) applies to top-right corner,
+                Third Value( 30px ) applies to bottom-right corner, & Fourth Value( 5px ) applies to bottom-left corner )
+
+            Three Values ->
+                border-radius : 15px 50px 30px;
+
+                ( First Value( 15px ) applies to the top-left corner, Second Value( 50px ) applies to top-right and
+                bottom-left corners, Third Value( 30px ) applies tp bottom-right corner )
+
+            Two Values ->
+                border-radius : 15px 50px;
+
+                ( First value( 15px ) apples to top-left & bottom-right corners, the Second Value( 50px ) applies
+                to top-right and bottom-left corners )
+
+            One Value ->
+                border-radius: 15px
+
+                ( The value ( 15px ) applies to ALL FOUR CORNERS! )
+
+
+    */
     padding: 0 2rem;
     height: 5.6rem;
     width: 24rem;
@@ -71,64 +231,57 @@ button .material-icons-round {
     }
     30% {
         opacity: 1;
-        transform: translate(-12px,0)
+        transform: translate(-12px, 0)
     }
     40% {
         opacity: 0;
-        transform: translate(-12px,100%)
+        transform: translate(-12px, 100%)
     }
     48% {
         opacity: 0;
-        transform: translate(-100px,100%)
+        transform: translate(-100px, 100%)
     }
     50% {
         opacity: 1;
-        transform: translate(-360px,-160px)
+        transform: translate(-360px, -160px)
     }
     51% {
         opacity: 1;
-        transform: translate(0,-100%)
+        transform: translate(0, -100%)
     }
-    70%{
+    70% {
         opacity: 1;
-        transform: translate(0,0)
+        transform: translate(0, 0)
     }
     100% {
         opacity: 1;
-        transform: translate(0,0)
+        transform: translate(0, 0)
     }
 }
 
 @keyframes buttonIconAnimation {
     0% {
-        transform: translate(0,0)
+        transform: translate(0, 0)
     }
     12% {
-        transform: translate(-100px,0)
-        scale(0.8, 0.8)
+        transform: translate(-100px, 0) scale(0.8, 0.8)
     }
     35% {
-        transform: translate(-100px, 0)
-        scale(0.8, 0.8)
+        transform: translate(-100px, 0) scale(0.8, 0.8)
     }
     50% {
-        transform: translate(250px,0)
-        scale(1.75, 1.75)
+        transform: translate(250px, 0) scale(1.75, 1.75)
     }
     60% {
-        transform: translate(250px,-80px)
-        scale(1.75,1.75)
+        transform: translate(250px, -80px) scale(1.75, 1.75)
     }
     61% {
-        transform: translate(0, -60px)
-        scale(1,1)
+        transform: translate(0, -60px) scale(1, 1)
     }
     65% {
-        transform: translate(0,0)
-        scale(1,1)
+        transform: translate(0, 0) scale(1, 1)
     }
     100% {
-        transform: translate(0,0)
-        scale(1,1)
+        transform: translate(0, 0) scale(1, 1)
     }
 }
