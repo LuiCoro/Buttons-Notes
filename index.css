@@ -199,6 +199,42 @@ button {
     align-items: center;
     justify-content: center;
 
+
+    /* CSS Color, Font-Family, Font-Size, Background-Color, Box-Shadow, Transition
+
+    color ->
+        - Specifies the color of text
+
+        Some Values:
+            color -> Specifies the color of text
+            initial -> Sets this property to its default value
+            inherit -> Inherits this property from its parent element
+
+                HEX Values:
+
+                    body {
+                    color: #92a8d1;
+                    }
+
+                RGB Values:
+
+                    body {
+                    color: rgb(201, 76, 76);
+                    }
+
+                RGBA Values:
+
+                body {
+                color:
+                }
+
+                HSL Values:
+
+                HSLA Values:
+
+
+
+    */
     color: #F8F8F8;
     font-family: "Poppins", sans-serif;
     font-size: 1.6rem;
